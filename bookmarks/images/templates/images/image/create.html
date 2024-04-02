@@ -1,0 +1,10 @@
+{%extends 'base.html'%}
+{%block CONTENT%}
+<h2>Добавить изображение в закладки</h2>
+<img src="{{request.GET.url}}">
+<form method="post">
+    {{form.as_p}}
+    {%csrf_token%}
+    <button type="submit">Добавить</button>
+</form>
+{%endblock%}

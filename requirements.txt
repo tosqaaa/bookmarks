@@ -1,0 +1,21 @@
+asgiref==3.7.2
+certifi==2024.2.2
+cffi==1.16.0
+charset-normalizer==3.3.2
+cryptography==42.0.5
+Django==5.0.2
+django-extensions @ git+https://github.com/django-extensions/django-extensions.git@25a41d8a3ecb24c009c5f4cac6010a091a3c91c8
+django-taggit==5.0.1
+easy-thumbnails==2.8.5
+idna==3.6
+MarkupSafe==2.1.5
+pillow==10.2.0
+pycparser==2.22
+pyOpenSSL==24.1.0
+python-dotenv==1.0.1
+pytils==0.4.1
+requests==2.31.0
+sqlparse==0.4.4
+tzdata==2024.1
+urllib3==2.2.1
+Werkzeug==2.2.2

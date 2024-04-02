@@ -1,0 +1,13 @@
+{%extends 'base.html'%}
+{%block CONTENT%}
+<h2>Ваша информационная панель. {{user.first_name}}</h2>
+{%with total_images_created=request.user.images_created.count%}
+<p>Добро пожаловать в вашу панель. Вы добавили в закладки {{total_images_created}} изображений</p>
+{%endwith%}
+<p>
+    Добавьте следующую кнопку в вашу панель закладок в браузере, чтобы иметь возможность добавлять изображения в закладки с других веб-сайтов:
+    <a href="javascript:{%include 'bookmarklet_launcher.js'%}" class="btn btn-primary">Добавить в закладки</a>
+</p>
+<p>Вы можете сменить свой пароль. <a href="{%url 'account:password_change'%}">Смена пароля</a></p>
+<p>Вы можете редактировать свой профиль. <a href="{%url 'account:edit'%}">Редактирование профиля</a></p>
+{%endblock%}

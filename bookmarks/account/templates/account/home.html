@@ -1,0 +1,11 @@
+{%extends 'base.html'%}
+{%block CONTENT%}
+<h2>Это домашняя страница</h2>
+{%if user.is_authenticated%}
+<h4>Вы авторизованы</h4>
+{%else%}
+<h4>Вы не авторизованы. <a href="{%url 'account:login'%}">Войти.</a></h4>
+{%endif%}
+
+
+{%endblock%}

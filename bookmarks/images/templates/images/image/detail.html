@@ -1,0 +1,20 @@
+{%extends 'base.html'%}
+{%block CONTENT%}
+<h2>{{image.title}}</h2>
+{%load thumbnail%}
+<a href="{{image.image.url}}">
+    <img src="{%thumbnail image.image 300x0%}">
+</a>
+{%with total_likes=image.users_like.count users_like=image.users_like.all%}
+<p>{{total_likes}} Лайков</p>
+<p>{{image.description}}</p>
+{%for user in image.users_like.all%}
+{%if user.profile.photo%}
+<img src="{{user.profile.photo.url}}">
+{%endif%}
+<p>{{user.first_name}}</p>
+{%empty%}
+<p>Пост пока что никому не понравился</p>
+{%endfor%}
+{%endwith%}
+{%endblock%}
